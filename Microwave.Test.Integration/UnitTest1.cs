@@ -9,6 +9,7 @@ namespace Microwave.Test.Integration
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.AreEqual(true, true);
         }
     }
 }
