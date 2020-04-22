@@ -8,6 +8,8 @@ using NSubstitute;
 using NSubstitute.Core.Arguments;
 using MicrowaveOvenClasses.Controllers;
 using MicrowaveOvenClasses.Interfaces;
+using System.Configuration;
+using MicrowaveOvenClasses.Boundary;
 
 namespace Microwave.Test.Integration
 {
@@ -19,12 +21,29 @@ namespace Microwave.Test.Integration
         IPowerTube _powerTube;
         ITimer _timer;
         IDisplay _display;
+        IUserInterface _ui;
 
 
         [SetUp]
         public void SetUp()
         {
+            _output = Substitute.For<IOutput>();
+            _timer = new Timer();
+            _powerTube = new PowerTube(_output);
+            _display = new Display(_output);
+            _ui = Substitute.For<IUserInterface>();
 
+            _uut = new CookController(_timer, _display, _powerTube, _ui);
+        }
+
+        [TestCase(1)]
+        [TestCase(50)]
+        [TestCase(100)]
+        public void StartCooking_CorrectPowerShownInDisplay(int power)
+        {
+            _uut.StartCooking(power, 50);
+
+            _output.Received(1).OutputLine($"PowerTube works with {power}");
         }
     }
 }
