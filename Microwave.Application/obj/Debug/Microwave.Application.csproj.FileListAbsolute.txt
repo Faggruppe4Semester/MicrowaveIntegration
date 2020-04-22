@@ -7,3 +7,13 @@ C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.App
 C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.csproj.CopyComplete
 C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.exe
 C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\bin\Debug\Microwave.Application.exe.config
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\bin\Debug\Microwave.Application.exe
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\bin\Debug\Microwave.Application.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\bin\Debug\MicrowaveOvenClasses.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\bin\Debug\MicrowaveOvenClasses.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.csprojAssemblyReference.cache
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.csproj.CoreCompileInputs.cache
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.csproj.CopyComplete
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.exe
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Application\obj\Debug\Microwave.Application.pdb

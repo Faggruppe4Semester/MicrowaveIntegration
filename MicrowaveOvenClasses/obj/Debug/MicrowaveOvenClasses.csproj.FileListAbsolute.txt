@@ -3,3 +3,9 @@ C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOven
 C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.csprojAssemblyReference.cache
 C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.dll
 C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\MicrowaveOvenClasses\bin\Debug\MicrowaveOvenClasses.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\MicrowaveOvenClasses\bin\Debug\MicrowaveOvenClasses.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.csprojAssemblyReference.cache
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.csproj.CoreCompileInputs.cache
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.pdb
