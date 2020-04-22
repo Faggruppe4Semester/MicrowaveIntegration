@@ -1,0 +1,17 @@
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.csprojAssemblyReference.cache
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.csproj.CoreCompileInputs.cache
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microwave.Test.Integration.dll.config
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microwave.Test.Integration.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microwave.Test.Integration.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Castle.Core.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\NSubstitute.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\nunit.framework.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Castle.Core.xml
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\NSubstitute.xml
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\nunit.framework.pdb
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\nunit.framework.xml
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.csproj.CopyComplete
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.dll
+C:\Users\frede\Documents\GitHub\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.pdb
