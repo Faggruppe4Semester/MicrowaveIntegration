@@ -1,0 +1,13 @@
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microwave.Test.Integration.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microwave.Test.Integration.pdb
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.csprojAssemblyReference.cache
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.csproj.CopyComplete
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\Microwave.Test.Integration\obj\Debug\Microwave.Test.Integration.pdb
