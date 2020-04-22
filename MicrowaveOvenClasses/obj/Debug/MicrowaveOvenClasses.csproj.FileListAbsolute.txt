@@ -1,0 +1,5 @@
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\bin\Debug\MicrowaveOvenClasses.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\bin\Debug\MicrowaveOvenClasses.pdb
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.csprojAssemblyReference.cache
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.dll
+C:\Users\Matias\Desktop\Skole\SWT\Aflevering3\MicrowaveIntegration\MicrowaveOvenClasses\obj\Debug\MicrowaveOvenClasses.pdb
