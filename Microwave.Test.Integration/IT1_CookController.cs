@@ -58,6 +58,47 @@ namespace Microwave.Test.Integration
             _output.Received(1).OutputLine($"Display shows: {expectedMinutes:D2}:{expectedSeconds:D2}");
         }
 
-        
+        [Test]
+        public void StartCooking_TimerExpired_UiReceivesDone()
+        {
+            _uut.StartCooking(50,2);
+
+            Thread.Sleep(2100);
+
+            _ui.Received(1).CookingIsDone();
+        }
+
+        [Test]
+        public void StartCooking_TimerExpired_MessageToOutput()
+        {
+            _uut.StartCooking(50,2);
+
+            Thread.Sleep(2100);
+
+            _output.Received(1).OutputLine("PowerTube turned off");
+        }
+
+        [Test]
+        public void Stop_PowertubeSTurnsOff()
+        {
+            _uut.StartCooking(50,50);
+
+            _uut.Stop();
+
+            _output.Received(1).OutputLine("PowerTube turned off");
+        }
+
+        [Test]
+        public void Stop_TimerTurnedOff()
+        {
+            _uut.StartCooking(50,50);
+
+            _uut.Stop();
+
+            Thread.Sleep(1100);
+
+            _output.Received(0).OutputLine("Display shows: 00:49");
+        }
+
     }
 }
