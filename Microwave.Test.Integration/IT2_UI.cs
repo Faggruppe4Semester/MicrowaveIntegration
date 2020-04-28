@@ -43,12 +43,81 @@ namespace Microwave.Test.Integration
         }
 
         [Test]
-        public void PowerButtonEvent_DisplayShowsPower()
+        public void PowerButtonEvent_OutputShowsPower()
         {
             _powerButton.Pressed += Raise.Event();
 
             _output.Received(1).OutputLine("Display shows: 50 W");
         }
-        
+
+        [Test]
+        public void PowerButtonEvent_MultiplePresses_OutPutShowsCorrectPower()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _powerButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Display shows: 100 W");
+        }
+
+        [Test]
+        public void PowerButtonEvent_PressesToMaxPower_OutputShowsCorrectPower()
+        {
+            for (int i = 0; i < 14; i++)
+            {
+                _powerButton.Pressed += Raise.Event();
+            }
+
+            _output.Received(1).OutputLine("Display shows: 700 W");
+        }
+
+        [Test]
+        public void PowerButtonEvent_MaxPowerOverflow_OutputResetsTo50()
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                _powerButton.Pressed += Raise.Event();
+            }
+
+            _output.Received(2).OutputLine("Display shows: 50 W");
+        }
+
+        [Test]
+        public void TimeButtonEvent_JustTimeEvent_NothingHappens()
+        {
+            _timeButton.Pressed += Raise.Event();
+
+            _output.Received(1);
+        }
+
+        [Test]
+        public void TimeButtonEvent_InitialExpectedEvent_OutputsCorrectTime()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Display shows: 01:00");
+        }
+
+        [Test]
+        public void TimeButtonEvent_MultiplePresses_OutputsCorrectTime()
+        {
+            _powerButton.Pressed += Raise.Event();
+
+            _timeButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Display shows: 02:00");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressDuringSetPower_OutputDisplaysReset()
+        {
+            _powerButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Display cleared");
+        }
+
     }
 }
