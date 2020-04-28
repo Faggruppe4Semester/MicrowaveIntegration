@@ -38,14 +38,14 @@ namespace Microwave.Test.Integration
             _uut = new CookController(_timer, _display, _powerTube, _ui);
         }
 
-        [TestCase(1)]
         [TestCase(50)]
-        [TestCase(100)]
+        [TestCase(350)]
+        [TestCase(700)]
         public void StartCooking_CorrectPowerShownInDisplay(int power)
         {
             _uut.StartCooking(power, 50);
 
-            _output.Received(1).OutputLine($"PowerTube works with {power}");
+            _output.Received(1).OutputLine($"PowerTube works with {power/7}");
         }
 
         [TestCase(1100,10,0,9)]

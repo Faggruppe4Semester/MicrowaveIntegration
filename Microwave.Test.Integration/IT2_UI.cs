@@ -1,8 +1,10 @@
-﻿using MicrowaveOvenClasses.Boundary;
+﻿using System.Threading;
+using MicrowaveOvenClasses.Boundary;
 using MicrowaveOvenClasses.Controllers;
 using MicrowaveOvenClasses.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
+using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
 namespace Microwave.Test.Integration
 {
@@ -119,5 +121,108 @@ namespace Microwave.Test.Integration
             _output.Received(1).OutputLine("Display cleared");
         }
 
+        [Test]
+        public void StartButtonEvent_PressDuringSetPower_OutputDisplaysNoLightOff()
+        {
+            _powerButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(0).OutputLine("Light is turned off");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressAfterSetTime_LightTurnsOn()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Light is turned on");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressAfterSetTime_CookingStarts()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine($"PowerTube works with {50/7}");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressAfterSetTime_CookingTimerStarts()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            Thread.Sleep(1100);
+
+            _output.Received(1).OutputLine("Display shows: 00:59");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressDuringCooking_LightTurnsOff()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Light is turned off");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressDuringCooking_DisplayIsCleared()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("Display cleared");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressDuringCooking_CookingStops()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            _output.Received(1).OutputLine("PowerTube turned off");
+        }
+
+        [Test]
+        public void StartButtonEvent_PressDuringCooking_TimerIsStoppedCorrectly()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            _startCancelButton.Pressed += Raise.Event();
+
+            Thread.Sleep(1100);
+
+
+            _output.Received(0).OutputLine("Display shows: 00:59");
+        }
+
+        [Test]
+        public void DoorEvent_RaisedAtBeginning_LightTurnsOn()
+        {
+            _door.Opened += Raise.Event();
+
+            _output.Received(1).OutputLine("Light is turned on");
+        }
     }
 }
