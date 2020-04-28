@@ -224,5 +224,109 @@ namespace Microwave.Test.Integration
 
             _output.Received(1).OutputLine("Light is turned on");
         }
+
+        [Test]
+        public void DoorEvent_RaisedDuringSetPower_DisplayResets()
+        {
+            _powerButton.Pressed += Raise.Event();
+
+            _door.Opened += Raise.Event();
+
+            _output.Received(1).OutputLine("Display cleared");
+        }
+
+        [Test]
+        public void DoorEvent_RaisedDuringSetPower_LightTurnsOn()
+        {
+            _powerButton.Pressed += Raise.Event();
+
+            _door.Opened += Raise.Event();
+
+            _output.Received(1).OutputLine("Light is turned on");
+        }
+
+        [Test]
+        public void DoorEvent_RaisedDuringSetTime_DisplayResets()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _door.Opened += Raise.Event();
+
+            _output.Received(1).OutputLine("Display cleared");
+        }
+
+        [Test]
+        public void DoorEvent_RaisedDuringSetTime_LightTurnsOn()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+
+            _door.Opened += Raise.Event();
+
+            _output.Received(1).OutputLine("Light is turned on");
+        }
+
+        [Test]
+        public void DoorEvent_RaisedDuringCooking_CookingStops()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            _door.Opened += Raise.Event();
+
+            _output.Received(1).OutputLine("PowerTube turned off");
+        }
+
+        [Test]
+        public void DoorEvent_RaisedDuringCooking_CookingStopsTimerIsStopped()
+        {
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            _door.Opened += Raise.Event();
+
+            Thread.Sleep(1100);
+
+            _output.Received(0).OutputLine("Display shows: 00:59");
+        }
+
+        [Test]
+        public void DoorClosedEvent_RaisedWithDoorClosed_NothingHappens()
+        {
+            _door.Closed += Raise.Event();
+
+            _output.Received(0);
+        }
+
+        [Test]
+        public void DoorClosedEvent_RaisedWithDoorOpen_LightTurnsOff()
+        {
+            _door.Opened += Raise.Event();
+
+            _door.Closed += Raise.Event();
+
+            _output.Received(1).OutputLine("Light is turned off");
+        }
+
+        [Test]
+        public void TimerExpires_CoockingIsDoneIsCalled()
+        {
+            //Sets up a special version of the UUT for this test Alone since the timer can not be started with less that 1 minute on the clock
+            ITimer timerSub = Substitute.For<ITimer>();
+            IPowerTube temPowerTube = new PowerTube(_output);
+            CookController tempCookController = new CookController(timerSub,_display,temPowerTube, _fakeUI);
+            UserInterface uut = new UserInterface(_powerButton, _timeButton, _startCancelButton, _door, _display, _light, tempCookController);
+
+            _powerButton.Pressed += Raise.Event();
+            _timeButton.Pressed += Raise.Event();
+            _startCancelButton.Pressed += Raise.Event();
+
+            timerSub.Expired += Raise.Event();
+
+            _fakeUI.Received(1).CookingIsDone();
+        }
     }
 }
