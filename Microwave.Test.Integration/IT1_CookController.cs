@@ -48,7 +48,7 @@ namespace Microwave.Test.Integration
             _output.Received(1).OutputLine($"PowerTube works with {power}");
         }
 
-        [TestCase(1001,10,0,9)]
+        [TestCase(1100,10,0,9)]
         [TestCase(2100,70,1,8)]
         public void StartCooking_TimerTickevent_PrintsRemaningTimeToDisplay(int waitTime,int startTime, int expectedMinutes, int expectedSeconds)
         {
@@ -58,10 +58,6 @@ namespace Microwave.Test.Integration
             _output.Received(1).OutputLine($"Display shows: {expectedMinutes:D2}:{expectedSeconds:D2}");
         }
 
-        [Test]
-        public void StartCooking_TimerExpired_UIrecievesDone()
-        {
-
-        }
+        
     }
 }
